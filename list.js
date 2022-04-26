@@ -25,6 +25,8 @@ function deleteItem(x){
 }
 //document.getElementById("myBtn").addEventListener("click", updateItem);
 let id;
+
+// function updateItem() permet d'afficher les valeurs dans le html (showupdate())
 function updateItem(y){
   let user = users.find(user => user.id==y);
   document.getElementById('nom').value = user.nom;
@@ -35,6 +37,7 @@ function updateItem(y){
   // console.log(user);
 }
 
+// save() pour récupérer les valeurs depuis les champs et enregistrer dans le localstorage 
 function save(){
   // console.log(id);
   let user = users.find(user => user.id==id);
