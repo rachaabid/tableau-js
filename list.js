@@ -9,7 +9,7 @@ function afficheList(){
     <th>${element.email}</th>
     <th>${element.age}</th>
     <th>${element.city}</th>
-    <th><button type="button" class="btn btn-success" id="update_btn" data-bs-toggle="modal" data-bs-target="#myModal" data-id="${element.id}">update</button></th>
+    <th><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" data-id="${element.id}">update</button></th>
     <th><button type="button" class="btn btn-danger" onclick="deleteItem(${i-1})">delete</button></th>
   </tr>
     `
@@ -36,7 +36,7 @@ function updateItem(y){
 }
 
 function save(){
-  console.log(id);
+  // console.log(id);
   let user = users.find(user => user.id==id);
   user.nom = document.getElementById('nom').value;
   user.email = document.getElementById('email').value;

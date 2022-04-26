@@ -76,11 +76,11 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>$(function () {
-      $("#myModal").on("shown.bs.modal", function () {
-        var my_id_value = $('#update_btn').data("id");
+      $("#myModal").on("shown.bs.modal", function (e) {
+        var my_id_value = $(e.relatedTarget).data('id');
         // alert(my_id_value);
         updateItem(my_id_value);
-        
+        // console.log($(e.relatedTarget).data('id'));
       });
     });</script>
 </body>
