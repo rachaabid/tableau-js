@@ -46,7 +46,7 @@ else {
   city.classList.remove("is-invalid");
 }
 
-if (isValidated = true){
+if (isValidated == true){
   let users = JSON.parse(localStorage.getItem("users")) || [];
   let id=Math.random().toString(36).substring(2);
   const user = {
