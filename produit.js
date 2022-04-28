@@ -44,7 +44,7 @@ function affiche() {
   
   users.forEach((element,i) => {
     p += `<tr>
-  <th>${i}</th>
+  <th>${i+1}</th>
   <th>${element.nom}</th>
   <th>${element.descript}</th>
   <th><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" data-id="${element.id}">Update</button></th>
@@ -75,4 +75,9 @@ function save() {
   user.descript = document.getElementById("descript").value;
   localStorage.setItem("users", JSON.stringify(users));
   window.location.reload();
+}
+
+function showCreateForm(){
+document.getElementById("createSection").classList.remove('d-none');
+document.getElementById("listSection").classList.add('d-none');
 }
