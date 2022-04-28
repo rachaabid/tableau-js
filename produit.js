@@ -41,8 +41,8 @@ if (isValidated == true){
 let users = JSON.parse(localStorage.getItem("users")) || [];
 function affiche() {
   let p = ``;
-  let i = 1;
-  users.forEach(element => {
+  
+  users.forEach((element,i) => {
     p += `<tr>
   <th>${i}</th>
   <th>${element.nom}</th>
@@ -50,7 +50,7 @@ function affiche() {
   <th><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" data-id="${element.id}">Update</button></th>
   <th><button type="button" class="btn btn-danger" onclick="deleteItem(${i - 1})">Delete</button></th>
 </tr>`
-    i++;
+    
   });
   document.getElementById('tab').innerHTML = p;
 }
